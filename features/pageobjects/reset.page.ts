@@ -5,7 +5,7 @@ class ResetPage extends Page {
     
     private get email(){ return $('[placeholder="name@company.com"]')}
     private get submit(){ return $('[data-qa="submit-button"]')}
-    private get errorMessage (){ return $('.ng-tns-c83-6[data-qa=danger]')}
+    private get errorMessage (){ return $('rx-alert[type="danger"]')}
 
     async enterEmailid(emailid:string){
         await (await this.email).setValue(emailid)
